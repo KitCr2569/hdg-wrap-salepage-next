@@ -12,7 +12,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ user, profile }) {
+        async signIn({ user, profile }: any) {
       if (user.email) {
         // Upsert user into SQLite (Prisma)
         try {
